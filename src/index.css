@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  /* Core Palette */
+  --color-primary-base: #766092;
+  --color-secondary-base: #A378B5;
+  --color-accent-base: #E7D3EE;
+
+  /* Semantic - Light Mode */
+  --bg-page: #FDFBFE; /* Very subtle lavender white */
+  --bg-card: #FFFFFF;
+  --text-main: #2D2438; /* Deep purple gray */
+  --text-muted: #766092; /* Using primary as muted text for elegance */
+  --border-subtle: #E7D3EE;
+  
+  /* Buttons */
+  --btn-primary-bg: #766092;
+  --btn-primary-text: #FFFFFF;
+  --btn-secondary-bg: #F3EAF6; /* Lighter version of accent */
+  --btn-secondary-text: #766092;
+}
+
+.dark {
+  /* Semantic - Dark Mode */
+  --bg-page: #151019; /* Deep dark purple */
+  --bg-card: #1E1726;
+  --text-main: #F5EFFF;
+  --text-muted: #A378B5; /* Secondary color as muted */
+  --border-subtle: #2D2438;
+
+  /* Buttons */
+  --btn-primary-bg: #A378B5; /* Lighter purple pops better on dark */
+  --btn-primary-text: #FFFFFF;
+  --btn-secondary-bg: #2D2438;
+  --btn-secondary-text: #E7D3EE;
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-brand-dark: #766092;
+  --color-brand-main: #A378B5;
+  --color-brand-light: #E7D3EE;
+
+  /* Semantic Colors mapped to variables */
+  --color-page: var(--bg-page);
+  --color-card: var(--bg-card);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+  --color-border-subtle: var(--border-subtle);
+
+  /* Button Colors */
+  --color-btn-primary-bg: var(--btn-primary-bg);
+  --color-btn-primary-text: var(--btn-primary-text);
+  --color-btn-secondary-bg: var(--btn-secondary-bg);
+  --color-btn-secondary-text: var(--btn-secondary-text);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-page text-text-main antialiased transition-colors duration-300;
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+  }
+
+  ::view-transition-old(root) {
+    z-index: 1;
+  }
+  ::view-transition-new(root) {
+    z-index: 9999;
+  }
+
+  .mask-image-b-gradient {
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  }
+}
