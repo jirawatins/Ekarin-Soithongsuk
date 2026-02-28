@@ -24,7 +24,7 @@ export default function Contact() {
           {/* Left Column: Contact Info */}
           <div className="flex flex-col justify-center h-full">
             <h1 className="font-display text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-brand-light mb-6 uppercase tracking-tighter drop-shadow-lg">
-              GET IN TOUCH
+              CONTACT ME
             </h1>
             <p className="text-lg text-brand-light/80 max-w-md font-medium leading-relaxed mb-12">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Non molestias odio ratione magni? Vitae illo doloribus dolor, vero fugiat laboriosam eum nemo deserunt et? Eligendi, deleniti dolore. Magni, officia! Cupiditate!
