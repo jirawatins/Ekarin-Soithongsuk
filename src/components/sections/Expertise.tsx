@@ -15,7 +15,7 @@ export default function Expertise() {
                 <div className="absolute inset-0 opacity-70 group-hover:opacity-100 transition-opacity duration-700">
                     {/* เปลี่ยนตรงนี้เป็นแท็ก video และดึงไฟล์จาก public */}
                     <video
-                        src="/SLRfinal.mp4"
+                        src="/SLRfinal.avi"
                         autoPlay
                         loop
                         muted
