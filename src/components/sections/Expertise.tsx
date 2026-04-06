@@ -1,6 +1,6 @@
 import React from "react";
 import { Layers, Play, Video } from "lucide-react";
-import { Showreel } from "@/components/ui/Showreel";
+// เอา import Showreel ออกได้เลยถ้าไม่ได้ใช้ที่อื่นแล้ว
 import { motion } from "motion/react";
 
 export default function Expertise() {
@@ -13,7 +13,15 @@ export default function Expertise() {
                 className="lg:col-span-2 group relative rounded-[2.5rem] overflow-hidden border border-brand-main/20 shadow-2xl bg-black min-h-[400px] md:min-h-[500px] flex"
             >
                 <div className="absolute inset-0 opacity-70 group-hover:opacity-100 transition-opacity duration-700">
-                    <Showreel />
+                    {/* เปลี่ยนตรงนี้เป็นแท็ก video และดึงไฟล์จาก public */}
+                    <video
+                        src="/SLRfinal.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover"
+                    />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none" />
 
@@ -24,11 +32,11 @@ export default function Expertise() {
                         </div>
                         <div>
                             <span className="text-brand-main font-black tracking-widest text-xs uppercase block mb-1">Demo</span>
-                            <h3 className="text-white font-display text-3xl md:text-4xl font-black uppercase tracking-tight">My Project</h3>
+                            <h3 className="text-white font-display text-3xl md:text-4xl font-black uppercase tracking-tight">Final Blocking</h3>
                         </div>
                     </div>
                     <p className="text-white/70 max-w-md font-medium text-sm md:text-base transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium earum illum ex soluta sint facilis asperiores animi repellat eum.
+                        ตัวอย่างผลงานแอนิเมชัน 3 มิติ แสดงขั้นตอนการทำ Blocking เพื่อกำหนดท่าทางและการเคลื่อนไหว
                     </p>
                 </div>
             </motion.div>
