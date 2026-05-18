@@ -22,8 +22,13 @@ export default function Hero() {
                 >
                     <h1 className="font-display text-6xl md:text-8xl lg:text-[7.5rem] font-black leading-[0.9] tracking-tighter text-text-main mb-6 uppercase">
                         EKARIN <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-main to-brand-light">SOITHONGSUK</span>
                     </h1>
+                    <h3
+                        className="font-display text-4xl md:text-5xl lg:text-6xl font-black leading-[0.9] tracking-tighter text-text-main mb-6 uppercase"
+                    ><span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-main to-brand-light">
+                            SOITHONGSUK
+                        </span>
+                    </h3>
 
                     <p className="text-lg md:text-xl text-text-muted font-medium max-w-lg mb-10 leading-relaxed mx-auto lg:mx-0">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ex sed quaerat non modi iure et quae sit numquam at.
